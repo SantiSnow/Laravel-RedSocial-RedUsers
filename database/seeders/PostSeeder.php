@@ -22,6 +22,8 @@ class PostSeeder extends Seeder
             'image'=>Str::random(10).".jpg",
             'likes'=> rand(1, 1000),
             'user_id'=> 6,
+            'created_at'=> Carbon::now()->toDateTimeString(),
+            'updated_at'=> Carbon::now()->toDateTimeString(),
         ]);
     }
 }
