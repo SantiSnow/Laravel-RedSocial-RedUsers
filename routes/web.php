@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,8 @@ Route::post('/login', [UsersController::class, 'login']);
 Route::post('/register', [UsersController::class, 'register']);
 Route::post('/logout', [UsersController::class, 'logout']);
 
-Route::get('/profile/{id}', [UsersController::class, 'profile']);
-Route::get('/posts/{id}', [UsersController::class, 'posts_user']);
+Route::post('/profile', [UsersController::class, 'profile']);
+Route::post('/posts', [UsersController::class, 'posts_user']);
+
+Route::post('/post', [PostController::class, 'createPost']);
+Route::post('/post-delete', [PostController::class, 'deletePost']);

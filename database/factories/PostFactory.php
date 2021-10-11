@@ -26,9 +26,9 @@ class PostFactory extends Factory
         return [
             'title'=>$this->faker->sentence(5, true),
             'description'=>$this->faker->paragraph(3, true),
-            'image'=>Str::random(10).".jpg",
+            'image'=>$this->faker->image(),
             'likes'=> rand(1, 1000),
-            'user_id'=> 6,
+            'user_id'=> 34,
             'created_at'=> Carbon::now()->toDateTimeString(),
             'updated_at'=> Carbon::now()->toDateTimeString(),
         ];

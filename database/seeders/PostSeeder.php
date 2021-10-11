@@ -21,7 +21,7 @@ class PostSeeder extends Seeder
             'description'=>Str::random(150),
             'image'=>Str::random(10).".jpg",
             'likes'=> rand(1, 1000),
-            'user_id'=> 6,
+            'user_id'=> 34,
             'created_at'=> Carbon::now()->toDateTimeString(),
             'updated_at'=> Carbon::now()->toDateTimeString(),
         ]);
